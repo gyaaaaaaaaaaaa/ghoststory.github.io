@@ -96,7 +96,6 @@ var id_number = [
   {id_number: "7"},
   {id_number: "8"},
   {id_number: "9"},
-  {id_number: "10"},
 ];
 
 for (const i in id_number) {
