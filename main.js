@@ -1,4 +1,8 @@
+$("#prologue").text("男女数人で心霊スポットへ肝試しにGO");
+$("#epilogue").text("物語は異形の正体が解らないまま終了");
+
 var scene =  {
+  // 霊を信じない男Aがいるルート
   scene_00001_00001: "霊を信じない男Aがいる",
   scene_00002_00001: "男Aが故意に禁忌を犯す",
   scene_00003_00001: "異形の存在を目撃する",
@@ -14,7 +18,30 @@ var scene =  {
 };
 
 var route = [
+  // 霊を信じない男Aがいるルート
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001],
   [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00002],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00002],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00003],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00007_00001, scene.scene_00008_00003],
+
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00008_00001, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00008_00001, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00008_00002, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00008_00002, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00005_00001, scene.scene_00006_00001, scene.scene_00008_00003, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00001, scene.scene_00006_00001, scene.scene_00008_00003, scene.scene_00009_00001],
+
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00007_00001, scene.scene_00008_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00007_00001, scene.scene_00008_00002],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00007_00001, scene.scene_00008_00003],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00008_00001, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00008_00002, scene.scene_00009_00001],
+  [scene.scene_00001_00001, scene.scene_00002_00001, scene.scene_00003_00001, scene.scene_00004_00002, scene.scene_00008_00003, scene.scene_00009_00001],
 ];
 
 var route_random = Math.floor(Math.random() * route.length);
